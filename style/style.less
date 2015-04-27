@@ -30,12 +30,12 @@
     width: 50%;
     float: left;
   }
-  .mask{
+  .mask {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 100;
-    .non-opacity{
+    z-index: -100;
+    .non-opacity {
       position: absolute;
       top: 0;
       opacity: 0.3;
@@ -43,12 +43,12 @@
       height: 100%;
       background: #000;
     }
-    .guide{
+    .guide {
       width: 82.1875%;
       height: 27.29%;
       margin: 100px auto;
       position: relative;
-      .guide-img{
+      .guide-img {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -58,12 +58,34 @@
         -moz-background-size: 100% 100%;
         background-size: 100% 100%;
       }
-      .guide-words{
+      .guide-words {
         width: 85%;
         margin: 0 auto;
         padding: 11% 5px;
-        font-size: 18px;
+        font-size: 17px;
         color: #ff7800;
+      }
+    }
+    .score-board {
+      width: 88.75%;
+      height: 44.58%;
+      margin: 60px auto;
+      position: relative;
+      display: none;
+      .score-img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        *{
+          font-size: 28px;
+          color: #ff4200;
+        }
+        position: absolute;
+        background: url("../images/score.png") no-repeat;
+        -webkit-background-size: 100% 100%;
+        -ms-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        background-size: 100% 100%;
       }
     }
   }

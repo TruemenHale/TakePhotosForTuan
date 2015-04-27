@@ -5,17 +5,29 @@ $(function(){
 	var oPlay=$('.play');
 	var oCross=$('.cross');
 	var oGame=$('.gamePage');
+	var oMask=$('.mask');
+	var oScoreImg=$('.score-img');
+	var oScoreBoard=$('.score-board');
+	var oGuide=$('.guide');
 	oCross.css('left',$(window).width()*0.1375);
 	oPlay.bind('click',function(){
 		oHolder.css('left',-100+'%');
-		gameInit(oGame,center);
+		oMask.css('left',50+'%');
+		oMask.css('z-index',100);
+		oMask.click(function(){
+			oMask.css('z-index',-100);
+			var ogoal=$('.logoTuan');
+			ogoal.remove();
+			gameInit(oGame,center,oMask,oScoreBoard,oGuide);
+		});
 	});
 	oHolder.css('width',$(window).width()*2);
 	aPages.css('height',$(window).height());
 	oC.css('height',$(window).height());
+	oScoreImg.css('line-height',parseInt(oScoreImg.css('height'))/2);
 	var center=($(window).height()*0.315);
 });
-function gameInit(obj,center){
+function gameInit(obj,center,oMask,oScoreBoard,oGuide){
 	var r=2*Math.random();
 	if(r<=1){
 		r='tuanqi';
@@ -75,6 +87,9 @@ function gameInit(obj,center){
 			sum*=1.05;
 		}
 		sum=Math.round(sum*1000)/1000;
-		alert(sum);
+		$('.score-num').html(sum);
+		oMask.css('z-index',100);
+		oGuide.css('display','none');
+		oScoreBoard.css('display','block');
 	});
 }

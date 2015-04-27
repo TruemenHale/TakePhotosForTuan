@@ -31,7 +31,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: -100;
 }
 .container .mask .non-opacity {
   position: absolute;
@@ -61,8 +61,30 @@
   width: 85%;
   margin: 0 auto;
   padding: 11% 5px;
-  font-size: 18px;
+  font-size: 17px;
   color: #ff7800;
+}
+.container .mask .score-board {
+  width: 88.75%;
+  height: 44.58%;
+  margin: 60px auto;
+  position: relative;
+  display: none;
+}
+.container .mask .score-board .score-img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  background: url("../images/score.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.container .mask .score-board .score-img * {
+  font-size: 28px;
+  color: #ff4200;
 }
 .container .beginPage {
   background: url("../images/begin-bg.jpg");
