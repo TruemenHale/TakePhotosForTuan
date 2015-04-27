@@ -86,6 +86,11 @@
   font-size: 28px;
   color: #ff4200;
 }
+.container .mask .score-board .score-img p {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+}
 .container .beginPage {
   background: url("../images/begin-bg.jpg");
   -webkit-background-size: 100% 100%;

@@ -6,7 +6,6 @@ $(function(){
 	var oCross=$('.cross');
 	var oGame=$('.gamePage');
 	var oMask=$('.mask');
-	var oScoreImg=$('.score-img');
 	var oScoreBoard=$('.score-board');
 	var oGuide=$('.guide');
 	oCross.css('left',$(window).width()*0.1375);
@@ -24,11 +23,11 @@ $(function(){
 	oHolder.css('width',$(window).width()*2);
 	aPages.css('height',$(window).height());
 	oC.css('height',$(window).height());
-	oScoreImg.css('line-height',parseInt(oScoreImg.css('height'))/2);
 	var center=($(window).height()*0.315);
 });
 function gameInit(obj,center,oMask,oScoreBoard,oGuide){
 	var r=2*Math.random();
+	var take=true;
 	if(r<=1){
 		r='tuanqi';
 		deg=5;
@@ -45,6 +44,7 @@ function gameInit(obj,center,oMask,oScoreBoard,oGuide){
 		m+=speed;
 		if(m>$(window).height()*0.52){
 			ogoal.remove();
+			take=false;
 			return;
 		}
 		ogoal.css('top',m);
@@ -87,9 +87,14 @@ function gameInit(obj,center,oMask,oScoreBoard,oGuide){
 			sum*=1.05;
 		}
 		sum=Math.round(sum*1000)/1000;
-		$('.score-num').html(sum);
-		oMask.css('z-index',100);
-		oGuide.css('display','none');
-		oScoreBoard.css('display','block');
+		if(!take){
+			sum=0;
+		}
+		setTimeout(function(){
+			$('.score-num').html(sum);
+			oMask.css('z-index',100);
+			oGuide.css('display','none');
+			oScoreBoard.css('display','block');
+		},1200);
 	});
 }
