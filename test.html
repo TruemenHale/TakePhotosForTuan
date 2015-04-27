@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.circle{
+			display: block;
+			margin: 0 auto;
+			width: 100px;
+			height: 100px;
+			position: relative;
+			top: 200px;
+			transform:rotate(0deg);
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var oDiv=document.querySelector('.circle');
+			console.log(oDiv.offsetTop);
+//			var m=0;
+//			setInterval(function(){
+//				m+=9;
+//				oDiv.style.transform='rotate('+m+'deg)';
+//			},1000/60);
+		}
+	</script>
+</head>
+<body>
+	<img src="images/tuanhui.png" class="circle">
+</body>
+</html>

@@ -3,4 +3,140 @@
   margin: 0;
   color: #ffffff;
   font-size: 12px;
+  font-family: 'Women';
+}
+/*声明 WebFont*/
+@font-face {
+  font-family: 'Women';
+  src: url('../font/women.ttf');
+  src: url('../font/women.eot?#font-spider') format('embedded-opentype'), url('../font/women.woff') format('woff'), url('../font/women.ttf') format('truetype'), url('../font/women.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+.container > ul {
+  position: absolute;
+  left: 0;
+  transition: left 0.25s;
+}
+.container li {
+  width: 50%;
+  float: left;
+}
+.container .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.container .mask .non-opacity {
+  position: absolute;
+  top: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.container .mask .guide {
+  width: 82.1875%;
+  height: 27.29%;
+  margin: 100px auto;
+  position: relative;
+}
+.container .mask .guide .guide-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/guide.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.container .mask .guide .guide-words {
+  width: 85%;
+  margin: 0 auto;
+  padding: 11% 5px;
+  font-size: 18px;
+  color: #ff7800;
+}
+.container .beginPage {
+  background: url("../images/begin-bg.jpg");
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.container .beginPage .slogan {
+  margin: 0 auto;
+  background: url("../images/slogan.png");
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  width: 89%;
+  height: 30.7%;
+  padding: 15px 12px;
+  position: relative;
+  top: 34%;
+}
+.container .beginPage .play {
+  width: 45%;
+  height: 11%;
+  margin: 0 auto;
+  position: relative;
+  top: 40%;
+  background: url("../images/play.png");
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.container .gamePage {
+  background: url("../images/game-bg.jpg");
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: relative;
+}
+.container .gamePage .cross {
+  position: absolute;
+  top: 11%;
+  width: 72.5%;
+  height: 41%;
+  z-index: 2;
+  background: url("../images/cross.png");
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.container .gamePage .logoTuan {
+  margin: 0 auto;
+  position: absolute;
+  width: 16.25%;
+  left: 0;
+  top: -320px;
+}
+.container .gamePage .shutBox {
+  position: relative;
+  top: 69%;
+  width: 45%;
+  height: 11%;
+  margin: 0 auto;
+}
+.container .gamePage .shutBox .shut {
+  width: 100%;
+  height: 100%;
+  background: url("../images/shut.png");
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: absolute;
 }
