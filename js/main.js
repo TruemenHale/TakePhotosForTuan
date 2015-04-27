@@ -75,6 +75,6 @@ function gameInit(obj,center){
 			sum*=1.05;
 		}
 		sum=Math.round(sum*1000)/1000;
-		console.log(sum);
+		alert(sum);
 	});
 }
