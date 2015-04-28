@@ -120,6 +120,7 @@
   height: 100%;
   text-align: center;
   position: absolute;
+  z-index: 100;
   background: url("../images/score.png") no-repeat;
   -webkit-background-size: 100% 100%;
   -ms-background-size: 100% 100%;
@@ -141,6 +142,12 @@
   -ms-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
+}
+.container .beginPage .copyright {
+  text-align: center;
+  color: #cccccc;
+  position: relative;
+  top: 42%;
 }
 .container .beginPage .slogan {
   margin: 0 auto;
@@ -180,12 +187,26 @@
   top: 11%;
   width: 72.5%;
   height: 41%;
-  z-index: 2;
+  z-index: 90;
+  transition: box-shadow 1s;
+}
+.container .gamePage .cross .cross-photos {
+  display: none;
+  margin: 0 auto;
+  width: 23%;
+  left: 0;
+  position: relative;
+  top: 35%;
+}
+.container .gamePage .cross-bg {
   background: url("../images/cross.png");
   -webkit-background-size: 100% 100%;
   -ms-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
+}
+.container .gamePage .photo-box {
+  box-shadow: 0 0 5px 12px #ffffff;
 }
 .container .gamePage .logoTuan {
   margin: 0 auto;
